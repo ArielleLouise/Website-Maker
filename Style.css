@@ -1,0 +1,306 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar
+{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-thumb
+{
+    background: gray;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.2s linear;
+}
+
+body
+{
+    background-color: #eeeeee;
+}
+
+/* NAV BAR */
+
+.Nav_Bar
+{
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+}
+
+.Logo img
+{
+    width: 300px;
+}
+
+.Nav_Menu ul
+{
+    display: flex;
+}
+
+.Nav_Menu ul li
+{
+    display: block;
+    font-size: 17px;
+    margin: 0 20px;
+}
+
+.Nav_Menu ul a
+{
+    font-weight: bold;
+    font-size: 17px;
+    color: #141414;
+    text-decoration: none;
+}
+
+.Nav_Menu ul li a
+{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #141414;
+}
+
+.Nav_Menu li a:before
+{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #141414;
+    transition: all .5s;
+}
+
+.Nav_Menu li a:hover::before
+{
+    width: 100%;
+}
+
+#User
+{
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+
+.Hidden
+{
+    transform: translateY(-120px);
+}
+
+/* BODY */
+
+section
+{
+    height: 100vh;
+}
+
+.Container
+{
+    height: 100vh;
+}
+
+/* HOME */
+
+#Home
+{
+    background-image: url(IMGs/BG.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#About
+{
+    background-image: url(IMGs/BG2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#Contact
+{
+    background-image: url(IMGs/BG3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.One_txt h1
+{
+    color: #141414;
+    font-size: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 800px;
+    margin-bottom: -320;
+}
+
+.One_txt p
+{
+    color: #141414;
+    font-size: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Create
+{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #212121;
+    border-radius: 50px;
+    border: solid;
+    color: #eeeeee;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.Create a
+{
+    text-decoration: none;
+    line-height: 60px;
+    color: #eeeeee;
+}
+
+.Create:hover
+{
+    color: gray;
+}
+
+.Create:hover a
+{
+    color: gray;
+}
+
+/* ABOUT US */
+
+.Two_txt h1
+{
+    color: #141414;
+    font-size: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 700px;
+    margin-bottom: -200;
+}
+
+.Two_txt p
+{
+    color: #141414;
+    font-size: 20px;
+
+    text-align: center;
+    padding: 5px;
+}
+
+/* CONTACTS */
+
+.Three_txt h1
+{
+    color: #141414;
+    font-size: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 700px;
+    margin-bottom: -250;
+}
+
+.Three_txt p
+{
+    font-size: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.Three_links
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 50;
+}
+
+.IG img:hover
+{
+    opacity: 0.5;
+}
+
+.X img:hover
+{
+    opacity: 0.5;
+}
+
+.FB img:hover
+{
+    opacity: 0.5;
+}
+
+footer
+{
+    background-color: #141414;
+    color: gray;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p
+{
+    font-size: 15px;
+    font-style: normal;
+}
+
+/* BODY ANIMATION */
+
+@media(prefer-reduced-motion)
+{
+    .Animated
+    {
+        transition: none;
+    }
+}
+
+.Animated
+{
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.show
+{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
